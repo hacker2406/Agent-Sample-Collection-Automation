@@ -38,10 +38,10 @@ const sampleSchema = new mongoose.Schema(
         lng: Number,
     },
     },
-collectedBy: {
-  type: mongoose.Schema.Types.ObjectId,
-  ref: 'User',
-},
+  collectedBy: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+  },
   },
   { timestamps: true }
 );

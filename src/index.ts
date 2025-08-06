@@ -12,7 +12,7 @@ const app = express();
 app.use(express.json());
 
 // Routes
-app.use("/api/auth", authRoutes);
+app.use("/auth", authRoutes);
 
 //Sample routes
 app.use('/samples', sampleRoutes);

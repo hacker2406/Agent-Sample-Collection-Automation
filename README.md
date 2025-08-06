@@ -271,6 +271,66 @@ Authorization: Bearer <JWT_TOKEN of Agent>
 - Date-time values must be in ISO format (e.g., `2025-08-06T12:00:00Z`).
 
 
+---
+
+## 🧠 Future Logic Improvements
+
+The following enhancements can make the system more robust, scalable, and closer to real-world logistics use cases:
+
+### 1. ✅ Agent Availability & Assignment Logic
+- Assign samples only to available agents.
+- Implement time-slot based scheduling and prevent overloading agents.
+- Assign nearest available agent dynamically using geolocation and ETA.
+
+### 2. 📍 Geofencing & Location Verification
+- Ensure agent is within pickup radius before allowing collection.
+- Alert hospital/admin if collection location deviates from expected route.
+
+### 3. 🕓 SLA Management
+- Define SLA (Service Level Agreement) time windows for pickup.
+- Notify stakeholders before SLA breaches.
+- Automatically escalate or reassign if SLA is about to be missed.
+
+### 4. 📊 Agent Performance Scoring System
+- Track average delay, punctuality, and completed pickups.
+- Introduce weighted performance scoring & rankings.
+- Incentivize top-performing agents.
+
+### 5. 🔁 Reassignment & Routing
+- Allow reassignment of samples to alternate agents in case of delays.
+- Notify reassigned agent and hospital.
+
+### 6. 📦 Sample Integrity Tracking
+- Add fields to track sample condition (e.g., "damaged", "leaked", "expired").
+- Allow agents/hospitals to report anomalies during collection.
+
+### 7. 🧪 Multiple Samples Per Pickup
+- Support batch scheduling (hospital schedules 5 samples at once).
+- Add grouping logic for optimizing routes and minimizing travel time.
+
+### 8. 🔐 Fine-Grained Access Control
+- Hospitals should only see their scheduled and completed samples.
+- Agents should only be able to update their assigned samples.
+- Introduce admin role for complete access and analytics.
+
+### 9. ⏱ Delay Classification
+- Classify delays as:
+  - Weather-based
+  - Traffic-related
+  - Agent-reported
+  - System delays (e.g., app crashes)
+- Use this for root-cause analysis.
+
+### 10. 🗓 Schedule Prediction (Optional)
+- Predict optimal pickup windows based on historical data.
+- Recommend best time slots to hospitals.
+
+---
+
+These logical improvements can greatly enhance reliability, efficiency, and scalability of the system in real-world scenarios.
+
+
+
 
 
 ## 👤 Author
